@@ -1,8 +1,12 @@
 $(document).ready(function() {
-  console.log("hi");
 
-  // $.getJSON('/search',function(cui) {
-  //   console.log(cui);
-  // });
+  $.getJSON('/search', 
+    function(data) {
+      console.log(data);
+      console.log('hi');
+    })
+    .fail(function(e) {
+      alert("Failed " + e);
+    });
 
 });
