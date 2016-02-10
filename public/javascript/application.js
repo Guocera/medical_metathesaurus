@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  console.log("hi");
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  // $.getJSON('/search',function(cui) {
+  //   console.log(cui);
+  // });
+
 });
