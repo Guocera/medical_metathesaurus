@@ -5,8 +5,15 @@ $(document).ready(function() {
     function(results) {
       console.log(results);
       var table = $("#search").find("tbody").empty();
-      var tr = table.append("<tr>");
-      tr.append('<td>').text(results);
+      results.data.cuis.list.forEach(function(result) {
+        table.append("<tr>");
+        var tr = $("#search").find("tr").last()
+        tr.append('<td>');
+        var td = tr.find("td")
+        debugger
+        td.text(result.cui);
+      });
+
 
     })
     .fail(function(e) {
