@@ -1,6 +1,8 @@
 Sinatra
 =============
 
+Uses the biolabeler API:  http://www.biolabeler.com/
+
 Brought to you by Lighthouse Labs
 
 ## Getting Started
