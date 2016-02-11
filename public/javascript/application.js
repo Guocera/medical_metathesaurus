@@ -6,7 +6,7 @@ $(document).ready(function() {
       console.log('hi');
     })
     .fail(function(e) {
-      alert("Failed " + e);
+      console.log(e);
     });
 
 });
