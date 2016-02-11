@@ -4,7 +4,7 @@ get '/' do
 end
 
 get '/search' do
-  HTTParty.get("http://rest.biolabeler.com/api/v1/source").to_json
+  # HTTParty.get("http://rest.biolabeler.com/api/v1/source").to_json
 
   body = {
     'keycode' => '6e62f3f0d3868a4745a1aeda7c3f19cb',
@@ -21,11 +21,10 @@ get '/search' do
   }
 
   HTTParty.post(
-    "http://rest.biolabeler.com/api/v1/text2cui", {
-      :body => body.to_json,
-      :headers => headers
-    }
-  )
+    "http://rest.biolabeler.com/api/v1/text2cui",
+    body: body.to_json,
+    headers: headers    
+  ).to_json
 
   # HTTParty.post("http://rest.biolabeler.com/api/v1/text2cui",
   #   body: { 
